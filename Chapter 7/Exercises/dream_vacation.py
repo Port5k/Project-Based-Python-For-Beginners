@@ -2,7 +2,7 @@
 # would you go? Include a block of code that prints the results of the poll.
 
 while True:
-    prompt = input("Where is your deram vacation location?: ")
+    prompt = input("Where is your dream vacation location?: ")
     if prompt == 'quit':
         break
     else:
