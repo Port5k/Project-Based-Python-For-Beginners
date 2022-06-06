@@ -1,30 +1,9 @@
-# class Dog:
-#     """A simple attempt to model a dog"""
-
-#     def __init__(self, name, age):
-#         """Initailize name and age attributes"""
-#         self.name = name
-#         self.age  = age
-    
-#     def sit(self):
-#         """Simulate a dog sitting in response to a command"""
-#         print(f"{self.name} is now sitting")
-
-#     def roll_over(self):
-#         """Simulate rolling over in response to a command"""
-#         print(f"{self.name} rolled over")
-
-# my_dog = Dog('Willie', 6)
-
-# print(f"My dog's name is {my_dog.name}")
-# print(f"My dog's age is {my_dog.age}")
-# my_dog.sit()
-# my_dog.roll_over()
-
-# your_dog = Dog('Lucy',3)
-
-# print(your_dog.name.capitalize())
-# print(your_dog.age * 34)
+# 9-9. Battery Upgrade: Use the final version of electric_car.py from this section.
+# Add a method to the Battery class called upgrade_battery(). This method
+# should check the battery size and set the capacity to 100 if it isn’t already.
+# Make an electric car with a default battery size, call get_range() once, and
+# then call get_range() a second time after upgrading the battery. You should
+# see an increase in the car’s range.
 
 class Car: 
     """A simple attempt to represent a car"""
@@ -67,22 +46,6 @@ class Car:
 
 
 
-
-# my_new_car = Car('audi', 'a4', 2019)
-# print(my_new_car.get_descriptive_name())
-# my_new_car.read_odometer()
-# # my_new_car.odometer_reading = 34
-# my_new_car.read_odometer()
-# my_new_car.update_odometer(-22)
-# my_new_car.read_odometer()
-
-# my_used_car = Car('Subaru', 'outback', 2015)
-# print(my_used_car.get_descriptive_name())
-# my_used_car.update_odometer(23500)
-# my_used_car.read_odometer()
-# my_used_car.increment_odometer(100)
-# my_used_car.read_odometer()
-
 class Battery:
     """A simple attempt to model a battery for an electric car"""
     
@@ -103,6 +66,9 @@ class Battery:
 
         print(f"This car can go about {range} miles on a full charge")
         
+    def upgrade_battery(self):
+        if self.battery_size < 100:
+            self.battery_size = 100
 
 
 class ElectricCar(Car):
@@ -122,12 +88,7 @@ class ElectricCar(Car):
         print("This car doesn't need a gas tank!")
 
 
-
-my_tesla = ElectricCar('tesla', 'model s', 2019)
-print(my_tesla.get_descriptive_name())
-print(my_tesla.read_odometer())
-my_tesla.update_odometer(34)
-print(my_tesla.read_odometer())
-my_tesla.fill_gas_tank()
-my_tesla.battery.describe_battery()
+my_tesla = ElectricCar('Tesla', 'Model S', 2019)
+my_tesla.battery.get_range()
+my_tesla.battery.upgrade_battery()
 my_tesla.battery.get_range()
