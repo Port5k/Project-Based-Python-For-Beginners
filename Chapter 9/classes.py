@@ -123,11 +123,20 @@ class ElectricCar(Car):
 
 
 
-my_tesla = ElectricCar('tesla', 'model s', 2019)
-print(my_tesla.get_descriptive_name())
-print(my_tesla.read_odometer())
-my_tesla.update_odometer(34)
-print(my_tesla.read_odometer())
-my_tesla.fill_gas_tank()
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
+# my_tesla = ElectricCar('tesla', 'model s', 2019)
+# print(my_tesla.get_descriptive_name())
+# print(my_tesla.read_odometer())
+# my_tesla.update_odometer(34)
+# print(my_tesla.read_odometer())
+# my_tesla.fill_gas_tank()
+# my_tesla.battery.describe_battery()
+# my_tesla.battery.get_range()
+
+
+from random import randint, choice
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+
+# print(choice(players))
+
+# print(randint(1,6))
